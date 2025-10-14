@@ -1,6 +1,6 @@
 services:
   aria2:
-    image: risedog/d.aria2
+    image: risedog/d.aria2:latest
     container_name: aria2
     environment:
       - PUID=1000
