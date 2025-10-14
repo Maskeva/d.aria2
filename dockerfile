@@ -5,8 +5,8 @@ RUN apk add --no-cache aria2 \
 
 RUN mkdir -p /conf
 #COPY aria2.conf /conf/
-RUN mkdir -p /conf/sh
-COPY udr.sh /conf/sh/
+RUN mkdir -p /mysh
+COPY udr.sh /mysh/
 
 EXPOSE 3681
 
