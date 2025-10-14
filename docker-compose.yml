@@ -2,11 +2,17 @@ services:
   aria2:
     image: risedog/d.aria2
     container_name: aria2
+    environment:
+      - PUID=1000
+      - PGID=1001
+      - UMASK_SET=022
     ports:
       - "36801:3681"
     volumes:
       - /vol2/1000/media:/downloads
     restart: unless-stopped
-networks:
-  default:
-    enable_ipv6: true
+    network_mode: host
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
