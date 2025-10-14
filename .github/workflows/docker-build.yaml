@@ -21,7 +21,7 @@ jobs:
         with:
           images: |
             risedog/d.aria2
-            ghcr.io/${{ github.repository }}
+            ghcr.io/${{ github.actor }}/d.aria2
           tags: |
             type=sha,prefix=,suffix=,event=push,format=short
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
