@@ -18,4 +18,4 @@ services:
         max-size: 1m
 networks:
   default:
-    enable_ipv6: true        
+    enable_ipv6: true
