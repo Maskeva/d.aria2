@@ -5,7 +5,8 @@ services:
     ports:
       - "36801:3681"
     volumes:
-      - ./conf:/conf
       - /vol2/1000/media:/downloads
-    command: ["aria2c", "--conf-path=/conf/aria2.conf","-D"]
-    restart: always
+    restart: unless-stopped
+networks:
+  default:
+    enable_ipv6: true

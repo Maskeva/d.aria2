@@ -8,4 +8,4 @@ COPY aria2.conf /conf/
 
 EXPOSE 3681
 
-CMD ["aria2c", "--conf-path=/conf/aria2.conf", "-D"]
+CMD ["aria2c", "--conf-path=/conf/aria2.conf"]
