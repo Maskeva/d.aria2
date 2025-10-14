@@ -3,8 +3,9 @@ FROM alpine:latest
 RUN apk add --no-cache aria2 \
     && rm -rf /var/cache/apk/*
 
-RUN mkdir -p /conf
-COPY aria2.conf /conf/
+#RUN mkdir -p /conf
+#COPY aria2.conf /conf/
+COPY udr.sh /conf/sh/
 
 EXPOSE 3681
 

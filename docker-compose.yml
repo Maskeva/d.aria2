@@ -10,9 +10,12 @@ services:
       - "36801:3681"
     volumes:
       - /vol2/1000/media:/downloads
+      - ./conf:/conf
     restart: unless-stopped
-    network_mode: host
     logging:
       driver: json-file
       options:
         max-size: 1m
+networks:
+  default:
+    enable_ipv6: true        
