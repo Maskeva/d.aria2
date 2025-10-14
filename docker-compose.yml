@@ -1,0 +1,11 @@
+services:
+  aria2:
+    image: my-aria2-clean
+    container_name: aria2-downloader
+    ports:
+      - "6800:3681"
+    volumes:
+      - ./conf:/conf
+      - /vol2/1000/media:/downloads
+    command: ["aria2c", "--conf-path=/conf/aria2.conf", "--dir=/downloads", "-D"]
+    restart: always
