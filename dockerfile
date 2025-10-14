@@ -1,10 +1,9 @@
 FROM alpine:latest
 
-RUN apk add --no-cache aria2 \
+RUN apk add --no-cache aria2  bash perl \
     && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /conf
-#COPY aria2.conf /conf/
 COPY udr.sh /root
 RUN chmod +x /root/udr.sh
 
