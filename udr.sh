@@ -10,6 +10,6 @@ if [ -f "$file_path" ]; then
     
     if [ "$file_name" != "$decoded_name" ]; then
         mv -n "$file_path" "$dir_name/$decoded_name"
-        echo "重命名: $file_name -> $decoded_name"
+        echo "rename: $file_name -> $decoded_name"
     fi
 fi
